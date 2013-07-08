@@ -1,0 +1,14 @@
+D:\svn\GoogleTranslator\bin\Debug\RavSoft.GoogleTranslator.exe.config
+D:\svn\GoogleTranslator\bin\Debug\RavSoft.GoogleTranslator.exe
+D:\svn\GoogleTranslator\bin\Debug\RavSoft.GoogleTranslator.pdb
+D:\svn\GoogleTranslator\bin\Debug\StringParser.dll
+D:\svn\GoogleTranslator\bin\Debug\WebResourceProvider.dll
+D:\svn\GoogleTranslator\obj\Debug\GoogleTranslator.csprojResolveAssemblyReference.cache
+D:\svn\GoogleTranslator\obj\Debug\RavSoft.GoogleTranslator.GoogleTranslatorFrm.resources
+D:\svn\GoogleTranslator\obj\Debug\GoogleTranslator.csproj.GenerateResource.Cache
+D:\svn\GoogleTranslator\obj\Debug\RavSoft.GoogleTranslator.exe
+D:\svn\GoogleTranslator\obj\Debug\RavSoft.GoogleTranslator.pdb
+D:\svn\GoogleTranslator\obj\Debug\RavSoft.GoogleTranslator.TranslatorJoomla.resources
+D:\svn\GoogleTranslator\obj\Debug\RavSoft.GoogleTranslator.TranslatorOne.resources
+D:\svn\GoogleTranslator\obj\Debug\RavSoft.GoogleTranslator.Properties.Resources.resources
+D:\svn\GoogleTranslator\bin\Debug\FeeSoft.GoogleTranslator.exe.config
