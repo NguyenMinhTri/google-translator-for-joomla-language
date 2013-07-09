@@ -119,7 +119,6 @@ namespace RavSoft.GoogleTranslator
             }
             gvData.DataSource = bindingSource;
             gvData.Update();
-            //System.IO.File.WriteAllLines(DataTranslator.TenFileVi, lines);
         }
 
         private SimpleData TranslateLang(Translator t, SimpleData temp)
@@ -154,7 +153,30 @@ namespace RavSoft.GoogleTranslator
 
         private void bSaveToFile_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đang trong quá trình xử lý mong các bạn thông cảm","Thông báo");
+            //MessageBox.Show("Đang trong quá trình xử lý mong các bạn thông cảm","Thông báo");
+            try
+            {
+                var viData = viDataFirst.Where(w => w.StartsWith(";")).ToArray();
+                int iCount = Tran.Count + viData.Length;
+                string[] temp = new string[iCount];
+                for (int i = 0; i < viData.Length; i++)
+                {
+                    temp[i] = viData[i];
+                }
+                int j = 0;
+                for (int i = viData.Length; i < temp.Length; i++)
+                {
+                    SimpleData tranTemp = Tran[j];
+                    temp[i] = tranTemp.KhoaChinh + "=\"" + tranTemp.Vi + "\"";
+                    j++;
+                }
+                System.IO.File.WriteAllLines(DataTranslator.TenFileVi, temp);
+                MessageBox.Show("Save completed a file in app path");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
