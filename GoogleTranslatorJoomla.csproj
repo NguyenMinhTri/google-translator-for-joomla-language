@@ -31,7 +31,7 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile />
     <PublishUrl>http://localhost/RavSoft.GoogleTranslator/</PublishUrl>
-    <Install>true</Install>
+    <Install>false</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
@@ -43,6 +43,7 @@
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -92,6 +93,18 @@
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>038442986001FE8C971E35838F004BA193A7499B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GoogleTranslatorJoomla_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="StringParser, Version=1.0.2206.35490, Culture=neutral" />
@@ -152,6 +165,7 @@
     <None Include="bluebuttonsmall.png" />
     <Content Include="Dependencies\StringParser.dll" />
     <Content Include="Dependencies\WebResourceProvider.dll" />
+    <None Include="GoogleTranslatorJoomla_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GoogleTranslatorFrm.resx">
