@@ -65,8 +65,18 @@ namespace RavSoft.GoogleTranslator
             this._comboTo.Items.AddRange(Translator.Languages.ToArray());
             this._comboFrom.SelectedItem = "English";
             this._comboTo.SelectedItem = "Vietnamese";
-            enDataFirst = System.IO.File.ReadAllLines(DataTranslator.PathEn);
-            viDataFirst = System.IO.File.ReadAllLines(DataTranslator.PathVi);
+            try
+            {
+                enDataFirst = System.IO.File.ReadAllLines(DataTranslator.PathEn);
+                if (DataTranslator.PathVi != string.Empty)
+                {
+                    viDataFirst = System.IO.File.ReadAllLines(DataTranslator.PathVi);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             LoadTranslate();
             _lblStatus.Text = string.Empty;
         }

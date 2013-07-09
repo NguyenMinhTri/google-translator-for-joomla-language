@@ -35,22 +35,22 @@
             this.txtVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pBar = new System.Windows.Forms.ProgressBar();
+            this._lblStatus = new System.Windows.Forms.Label();
+            this.chkFull = new System.Windows.Forms.CheckBox();
             this.chkIsEmpty = new System.Windows.Forms.CheckBox();
             this._comboTo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this._comboFrom = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this._lblStatus = new System.Windows.Forms.Label();
             this.bSaveToFile = new System.Windows.Forms.Button();
             this.bTranslate = new System.Windows.Forms.Button();
-            this.pBar = new System.Windows.Forms.ProgressBar();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.chkFull = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gvData
@@ -120,6 +120,42 @@
             this.panel2.Size = new System.Drawing.Size(893, 89);
             this.panel2.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pBar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 61);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(893, 28);
+            this.panel3.TabIndex = 11;
+            // 
+            // pBar
+            // 
+            this.pBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pBar.Location = new System.Drawing.Point(0, 0);
+            this.pBar.Name = "pBar";
+            this.pBar.Size = new System.Drawing.Size(893, 28);
+            this.pBar.TabIndex = 10;
+            // 
+            // _lblStatus
+            // 
+            this._lblStatus.AutoSize = true;
+            this._lblStatus.Location = new System.Drawing.Point(197, 43);
+            this._lblStatus.Name = "_lblStatus";
+            this._lblStatus.Size = new System.Drawing.Size(42, 13);
+            this._lblStatus.TabIndex = 11;
+            this._lblStatus.Text = "asadad";
+            // 
+            // chkFull
+            // 
+            this.chkFull.AutoSize = true;
+            this.chkFull.Location = new System.Drawing.Point(712, 35);
+            this.chkFull.Name = "chkFull";
+            this.chkFull.Size = new System.Drawing.Size(113, 17);
+            this.chkFull.TabIndex = 8;
+            this.chkFull.Text = "Translate full fields";
+            this.chkFull.UseVisualStyleBackColor = true;
+            // 
             // chkIsEmpty
             // 
             this.chkIsEmpty.AutoSize = true;
@@ -171,24 +207,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Source language:";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.gvData);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 89);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(893, 442);
-            this.panel1.TabIndex = 2;
-            // 
-            // _lblStatus
-            // 
-            this._lblStatus.AutoSize = true;
-            this._lblStatus.Location = new System.Drawing.Point(197, 43);
-            this._lblStatus.Name = "_lblStatus";
-            this._lblStatus.Size = new System.Drawing.Size(42, 13);
-            this._lblStatus.TabIndex = 11;
-            this._lblStatus.Text = "asadad";
-            // 
             // bSaveToFile
             // 
             this.bSaveToFile.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -216,32 +234,14 @@
             this.bTranslate.UseVisualStyleBackColor = true;
             this.bTranslate.Click += new System.EventHandler(this.bTranslate_Click);
             // 
-            // pBar
+            // panel1
             // 
-            this.pBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pBar.Location = new System.Drawing.Point(0, 0);
-            this.pBar.Name = "pBar";
-            this.pBar.Size = new System.Drawing.Size(893, 28);
-            this.pBar.TabIndex = 10;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pBar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 61);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(893, 28);
-            this.panel3.TabIndex = 11;
-            // 
-            // chkFull
-            // 
-            this.chkFull.AutoSize = true;
-            this.chkFull.Location = new System.Drawing.Point(712, 35);
-            this.chkFull.Name = "chkFull";
-            this.chkFull.Size = new System.Drawing.Size(113, 17);
-            this.chkFull.TabIndex = 8;
-            this.chkFull.Text = "Translate full fields";
-            this.chkFull.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.gvData);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 89);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(893, 442);
+            this.panel1.TabIndex = 2;
             // 
             // TranslatorOne
             // 
@@ -252,13 +252,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "TranslatorOne";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TranslatorOne";
             this.Load += new System.EventHandler(this.TranslatorOne_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
